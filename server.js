@@ -51,14 +51,14 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page', 
-        welcomeMessage: 'Welcome to my website', 
+        welcomeMessage: 'Welcome to my website' 
         // currentYear: new Date().getFullYear()
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-       pageTitle: 'About page', 
+       pageTitle: 'About page' 
     //    currentYear: new Date().getFullYear() 
     });
 });
@@ -76,5 +76,6 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is up on port 3000`);
+    console.log(`Server is up on port ${port}`);
 });
+// port number is still 3000; ${port} injects the port number
